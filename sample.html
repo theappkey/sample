@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset=utf-8 />
+    <title>TheAppKey API Demo</title>
+
+    <script type="text/javascript" src="https://www.lockmagic.com/theappkey/theappkey.js"></script>
+
+    <link href="sample.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="sample.js"></script>
+
+
+</head>
+
+<body>
+    <div id="login" style="display:block;">
+        
+            <form>
+                <center>
+                    <div class="imgcontainer">
+                        <img src="deploy.gif" alt="Please register your email address" class="xavatar">
+                    </div>
+
+                    <div class="container">
+                        <label><b>Sign in using your Lockmagic credentials</b></label><br />
+                        <label>Username</label>&nbsp;&nbsp;
+                        <input type="text" placeholder="Enter Username" name="uname" id="email"><br />
+
+                        <label>Password</label>&nbsp;&nbsp;
+                        <input type="password" placeholder="Enter Password" name="psw" id="password"><br />
+
+                        <button class="cbtn"  type="submit" onclick="LoginUser(); return false;" style="background-color:red;margin-left:50px;margin-right:10px;">Sign In</button>
+                        
+                        <br />
+                        <button onclick="startLogin('g');" class="cbtn"  style="background-color:seagreen;">Sign in with Google</button>
+                        <button onclick="startLogin('o');" class="cbtn"  style="background-color:skyblue;">Sign in with Microsoft</button>
+
+                    </div>
+                </center>
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn" onclick="javascript: doRegister();">Register</button>
+           
+        </div>
+        </form>
+
+    </div>
+    <div id="drop" style="display:none;">
+        <h1 align=center>File Encryption Demo</h1>
+
+        <label>Select file to encrypt or decrypt</label><br />
+        <input id="file" type="file" multiple onchange="DoAction()">
+
+        <div>
+            <button type="button" class="cbtn" onclick="javascript: doEvents();">View Events</button>
+            <button type="button" class="cbtn" onclick="javascript: doContacts();">View Contacts</button>
+            <button type="button" class="cbtn" onclick="javascript: doQueryPolicy();">Query Policy</button>
+            
+        </div>
+
+        <div id="status">Select File or Action.</div>
+       
+    </div>
+</body>
+</html>
